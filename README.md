@@ -40,3 +40,9 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
 1. Create a user using CLI: https://stackoverflow.com/questions/46972695/see-setup-a-user-with-mongodb-compass
 
 1. Add sample database entries (comma separated array of documents).
+
+1. Install mongoose to access MongoDB data as JSON objects:
+   ``` 
+   npm install --save mongoose
+   ``` 
+1. 

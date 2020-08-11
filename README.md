@@ -33,7 +33,10 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
     ``` 
     node server
    ```
-1. Install mongodb locally:
-   ``` 
-   https://www.mongodb.com/try/download/community
-   ```
+1. Install mongodb locally: https://www.mongodb.com/try/download/community
+   
+   See how to use and connect to Compass here: https://zellwk.com/blog/local-mongodb/
+
+1. Create a user using CLI: https://stackoverflow.com/questions/46972695/see-setup-a-user-with-mongodb-compass
+
+1. Add sample database entries (comma separated array of documents).

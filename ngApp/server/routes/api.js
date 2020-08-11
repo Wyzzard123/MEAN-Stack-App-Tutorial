@@ -2,6 +2,8 @@ require('dotenv').config()
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const Video = require('../models/video');
+
 
 require('dotenv').config()
 mongo_db_user = process.env.MONGODB_USER;
@@ -22,6 +24,19 @@ mongoose.connect(db, function(err) {
 router.get('/', function(req, res){
   // See this by going to http://localhost:3000/api
   res.send('api works');
+});
+
+router.get('/videos', function(req, res){
+  console.log("Get request for all videos.")
+  // See this by going to http://localhost:3000/api
+  Video.find({})
+    .exec(function(err, videos){
+      if (err) {
+        console.log("Error retrieving videos: " + err)
+      } else {
+        res.json(videos);
+      }
+    });
 });
 
 module.exports = router;

@@ -53,3 +53,20 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
     ``` 
    ng g c videoCenter 
    ```
+1. Install bootstrap to app:
+   ``` 
+   npm install --save bootstrap
+   ```
+1. Include path to bootstrap in angular.json (in older versions, this was called angular-cli.json):
+   ``` 
+   "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+   ```
+   __NOTE__: No need for .. before node_modules as the folder is referenced from the ngApp folder.
+1. Make sure to run ngbuild whenever a change is made to the angular app.
+   ``` 
+   ng build
+   ```
+1. 

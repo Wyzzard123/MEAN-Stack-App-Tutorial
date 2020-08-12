@@ -8,6 +8,8 @@ import { VideoCenterComponent } from './video-center/video-center.component';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import {FormsModule} from "@angular/forms";
+// https://stackoverflow.com/questions/47236963/no-provider-for-httpclient
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     // Must add FormsModule or else [(ngModel)] will not work when creating forms.
-    FormsModule
+    FormsModule,
+    // Must add HttpClientModule or you will get an error
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

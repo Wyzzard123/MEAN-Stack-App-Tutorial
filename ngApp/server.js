@@ -14,6 +14,10 @@ const port = 3000;
 // Create an instance of Express
 const app = express()
 
+//Allow for CORS (otherwise calling API from angular site does not work)
+const cors  = require('cors')
+app.use(cors())
+
 // Specify folder where all the angular code is placed (the dist folder)
 app.use(express.static(path.join(__dirname, 'dist')));
 

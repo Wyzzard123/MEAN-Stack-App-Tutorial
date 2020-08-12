@@ -9,7 +9,7 @@ export class SafePipe implements PipeTransform {
   transform(url:any) {
     // Replace watch?v= with embed/
     if (url.indexOf("watch?v=") != -1) {
-      url.replace("watch?v=", "embed/")
+      url = url.replace("watch?v=", "embed/");
     }
     // Returns a safer version of the URL.
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);

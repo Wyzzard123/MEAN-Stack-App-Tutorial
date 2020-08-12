@@ -12,6 +12,7 @@ export class VideoService {
   private _getUrl = "http://localhost:3000/api/videos";
   private _postUrl = "http://localhost:3000/api/video";
   private _putUrl = "http://localhost:3000/api/video/"
+  private _deleteUrl = "http://localhost:3000/api/video/"
 
   constructor(private _http: HttpClient) { }
 
@@ -28,5 +29,10 @@ export class VideoService {
   updateVideo(video: Video){
     return this._http.put(this._putUrl + video._id, video);
   }
+
+  deleteVideo(video: Video){
+    return this._http.delete(this._deleteUrl + video._id);
+  }
+
 
 }

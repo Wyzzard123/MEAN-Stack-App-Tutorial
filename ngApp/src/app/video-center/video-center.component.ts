@@ -51,4 +51,22 @@ export class VideoCenterComponent implements OnInit {
     // Clear out the detail view.
     this.selectedVideo =null;
   }
+
+  onDeleteVideoEvent(video: any) {
+    let videoArray = this.videos
+
+    this._videoService.deleteVideo(video)
+      .subscribe(resDeletedVideo => {
+        // video = resDeletedVideo
+        let videoArrayLength = videoArray.length
+        for (let i = 0; i < videoArrayLength; i++) {
+          if (videoArray[i]._id === video._id)
+          {
+            // Removes video from the UI (the videoArray determines what is shown in the UI)
+            videoArray.splice(i, 1)
+          }
+        }
+      });
+    this.selectedVideo =null;
+  };
 }

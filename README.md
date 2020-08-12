@@ -87,3 +87,4 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
    ``` 
    ng g p safe 
    ```
+   __NOTE__: You must use the /embed/ link for the youtube videos. Otherwise, Youtube will not display the video: https://stackoverflow.com/questions/51976152/refused-to-display-https-www-youtube-com-watchv-okzrsbjqjos-in-a-frame-beca

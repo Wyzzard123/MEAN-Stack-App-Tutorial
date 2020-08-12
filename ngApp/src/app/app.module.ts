@@ -10,6 +10,7 @@ import { VideoListComponent } from './video-list/video-list.component';
 import {FormsModule} from "@angular/forms";
 // https://stackoverflow.com/questions/47236963/no-provider-for-httpclient
 import { HttpClientModule } from '@angular/common/http';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     VideoCenterComponent,
     VideoDetailComponent,
-    VideoListComponent
+    VideoListComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

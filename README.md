@@ -83,3 +83,7 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
    ``` 
    ng g s video
    ```
+1. Generate a pipe (p) to turn youtube urls into safe urls: 
+   ``` 
+   ng g p safe 
+   ```

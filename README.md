@@ -45,4 +45,11 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
    ``` 
    npm install --save mongoose
    ``` 
-1. 
+1. While in ngApp directory, create angular home component with this (ng = angular, g = generate, c = component, home = name of our component):
+    ``` 
+   ng g c home 
+   ```
+1. Do the same for videoCenter component:
+    ``` 
+   ng g c videoCenter 
+   ```

@@ -78,3 +78,8 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
    ``` 
    ng g cl Video
    ```
+   
+1. Generate a video service to handle CRUD operations.
+   ``` 
+   ng g s video
+   ```

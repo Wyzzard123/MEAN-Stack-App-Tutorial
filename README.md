@@ -74,3 +74,7 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
    ng g c videoDetail 
    ng g c videoList 
    ```
+1. Generate video class (g cl) in Angular with:
+   ``` 
+   ng g cl Video
+   ```

@@ -1,1 +1,4 @@
-<p>video-list works!</p>
+<!--NOTE: Tutorial says use nav-stacked. Should use flex-column instead as that has been deprecated.-->
+<ul class="nav nav-pills flex-column">
+  <li *ngFor="let video of videos" class="nav-item"><a class="nav-link">{{video.title}}</a></li>
+</ul>

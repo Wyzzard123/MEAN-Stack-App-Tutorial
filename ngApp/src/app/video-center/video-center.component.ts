@@ -10,9 +10,9 @@ import {VideoService} from "../video.service";
 })
 export class VideoCenterComponent implements OnInit {
   // This is taken as 'inputs' in the video list components.
-  videos: Array<Video>;
+  videos: any; //Array<Video>;
 
-  selectedVideo: Video;
+  selectedVideo: any; //Video;
 
   //By default, hide the form responsible for adding the new video
   hideNewVideo: boolean = true;
@@ -43,5 +43,12 @@ export class VideoCenterComponent implements OnInit {
 
   newVideo(){
     this.hideNewVideo = false;
+  }
+
+  onUpdateVideoEvent(video: any) {
+    this._videoService.updateVideo(video)
+      .subscribe(resUpdatedVideo => video = resUpdatedVideo);
+    // Clear out the detail view.
+    this.selectedVideo =null;
   }
 }

@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import {Video} from "../video";
 
 @Component({
   selector: 'video-detail',
   templateUrl: './video-detail.component.html',
   styleUrls: ['./video-detail.component.css'],
-  inputs: ['video']
+  inputs: ['video'],
+  outputs: ['updateVideoEvent']
 })
 export class VideoDetailComponent implements OnInit {
   video: Video;
   editTitle: boolean = false;
+  private updateVideoEvent = new EventEmitter();
 
   constructor() { }
 
@@ -24,4 +26,7 @@ export class VideoDetailComponent implements OnInit {
     this.editTitle = true;
   }
 
+  updateVideo() {
+    this.updateVideoEvent.emit(this.video);
+  }
 }

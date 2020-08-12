@@ -69,4 +69,8 @@ https://www.youtube.com/playlist?list=PLC3y8-rFHvwj200LLotCYum_9wmGeTJx9
    ``` 
    ng build
    ```
-1. 
+1. Create videoDetail and videoList components:
+    ``` 
+   ng g c videoDetail 
+   ng g c videoList 
+   ```

@@ -9,10 +9,19 @@ import {Video} from "../video";
 })
 export class VideoDetailComponent implements OnInit {
   video: Video;
+  editTitle: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  //When one navigates away from the video, editTitle becomes false again.
+  ngOnChanges() {
+    this.editTitle = false;
+  }
+  onTitleClick() {
+    this.editTitle = true;
   }
 
 }

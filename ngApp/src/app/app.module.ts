@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { VideoCenterComponent } from './video-center/video-center.component';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { VideoListComponent } from './video-list/video-list.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { VideoListComponent } from './video-list/video-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // Must add FormsModule or else [(ngModel)] will not work when creating forms.
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
